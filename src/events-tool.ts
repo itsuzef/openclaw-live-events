@@ -2,17 +2,17 @@ import { Type } from "@sinclair/typebox";
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
 import { fetchEvents, formatEvents } from "./ticketmaster.js";
 
-type EventsPluginConfig = {
+type LiveEventsPluginConfig = {
   apiKey?: string;
   defaultLocation?: string;
 };
 
 export function createEventsTool(api: OpenClawPluginApi) {
   return {
-    name: "events_search",
-    label: "Events Search",
+    name: "live_events_search",
+    label: "Live Events Search",
     description:
-      "Search for upcoming events near a location. Returns concerts, sports, theater, and other live events from Ticketmaster.",
+      "Search for upcoming live events near a location. Returns concerts, sports, theater, and other events from Ticketmaster.",
     parameters: Type.Object({
       location: Type.Optional(
         Type.String({
@@ -28,11 +28,11 @@ export function createEventsTool(api: OpenClawPluginApi) {
     }),
 
     async execute(_id: string, params: Record<string, unknown>) {
-      const cfg = (api.pluginConfig ?? {}) as EventsPluginConfig;
+      const cfg = (api.pluginConfig ?? {}) as LiveEventsPluginConfig;
       const apiKey = cfg.apiKey;
       if (!apiKey) {
         throw new Error(
-          "events plugin: apiKey not configured. Set it in plugins.entries.events.config.apiKey",
+          "live-events plugin: apiKey not configured. Set it in plugins.entries.live-events.config.apiKey",
         );
       }
 

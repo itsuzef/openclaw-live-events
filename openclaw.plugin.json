@@ -1,7 +1,7 @@
 {
-  "id": "events",
-  "name": "Events",
-  "description": "Search nearby events via Ticketmaster Discovery API",
+  "id": "live-events",
+  "name": "Live Events",
+  "description": "Search live events near you via Ticketmaster Discovery API",
   "configSchema": {
     "type": "object",
     "additionalProperties": false,

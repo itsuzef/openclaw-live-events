@@ -1,14 +1,24 @@
 {
-  "name": "@openclaw/events",
-  "version": "2026.2.20",
-  "private": true,
-  "description": "OpenClaw events search plugin (Ticketmaster Discovery API)",
+  "name": "@itsuzef/openclaw-live-events",
+  "version": "1.0.0",
+  "description": "OpenClaw community plugin — search live events via Ticketmaster Discovery API",
   "type": "module",
-  "devDependencies": {
-    "openclaw": "workspace:*"
+  "license": "MIT",
+  "author": "itsuzef",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsuzef/openclaw-live-events.git"
+  },
+  "homepage": "https://github.com/itsuzef/openclaw-live-events#readme",
+  "bugs": {
+    "url": "https://github.com/itsuzef/openclaw-live-events/issues"
   },
   "peerDependencies": {
     "openclaw": ">=2026.1.26"
+  },
+  "devDependencies": {
+    "@sinclair/typebox": "*",
+    "openclaw": "latest"
   },
   "openclaw": {
     "extensions": [
