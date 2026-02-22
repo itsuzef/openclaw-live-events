@@ -16,5 +16,9 @@
         "description": "Default city for event searches (e.g. \"Miami\")"
       }
     }
+  },
+  "uiHints": {
+    "apiKey": { "label": "Ticketmaster API Key", "sensitive": true },
+    "defaultLocation": { "label": "Default City", "placeholder": "Miami" }
   }
 }

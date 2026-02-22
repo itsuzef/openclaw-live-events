@@ -1,11 +1,6 @@
 import { Type } from "@sinclair/typebox";
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
-import { fetchEvents, formatEvents } from "./ticketmaster.js";
-
-type LiveEventsPluginConfig = {
-  apiKey?: string;
-  defaultLocation?: string;
-};
+import { fetchEvents, formatEvents, type LiveEventsPluginConfig } from "./ticketmaster.js";
 
 export function createEventsTool(api: OpenClawPluginApi) {
   return {

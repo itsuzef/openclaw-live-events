@@ -8,7 +8,7 @@ const liveEventsPlugin = {
   description: "Search live events near you via Ticketmaster Discovery API",
 
   register(api: OpenClawPluginApi) {
-    api.registerTool(createEventsTool(api), { name: "live_events_search" });
+    api.registerTool(createEventsTool(api), { optional: true });
 
     api.registerCli(({ program }) => registerEventsCli(api, { program }), {
       commands: ["events"],

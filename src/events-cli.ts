@@ -1,11 +1,6 @@
 import type { Command } from "commander";
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
-import { fetchEvents, formatEvents } from "./ticketmaster.js";
-
-type LiveEventsPluginConfig = {
-  apiKey?: string;
-  defaultLocation?: string;
-};
+import { fetchEvents, formatEvents, type LiveEventsPluginConfig } from "./ticketmaster.js";
 
 export function registerEventsCli(api: OpenClawPluginApi, { program }: { program: Command }) {
   program

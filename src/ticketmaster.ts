@@ -1,5 +1,10 @@
 const DISCOVERY_BASE = "https://app.ticketmaster.com/discovery/v2/events.json";
 
+export type LiveEventsPluginConfig = {
+  apiKey?: string;
+  defaultLocation?: string;
+};
+
 export type EventSearchParams = {
   apiKey: string;
   location?: string;
